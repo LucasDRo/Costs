@@ -1,9 +1,9 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
     background-color: #222;
     padding: 1em;
     width: 100%;
+    font-size: small;
 }
 
 .list {
@@ -28,4 +28,5 @@
 
 .img {
     width: 120px;
+    margin-right: 3em;
 }
