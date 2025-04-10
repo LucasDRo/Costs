@@ -3,11 +3,9 @@ import ProjectForm from "../project/ProjectForm";
 import styles from "./NewProject.module.css";
 
 function NewProject() {
-
   const navigate = useNavigate();
 
   function createPost(project) {
-
     // initialize cost and services
     project.cost = 0;
     project.services = [];
@@ -21,17 +19,18 @@ function NewProject() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        navigate("/projects", { message: "Projeto criado com sucesso!" });
+        navigate("/projects", {
+          state: { message: "Projeto criado com sucesso!" },
+        });
       })
       .catch((err) => console.log(err));
-
   }
 
   return (
     <div className={styles.newproject_container}>
       <h1>Criar Projeto</h1>
       <p>Cire seu projeto para depois adicionar os serviços</p>
-      <ProjectForm btnText="Criar projeto" handleSubmit={createPost}/>
+      <ProjectForm btnText="Criar projeto" handleSubmit={createPost} />
     </div>
   );
 }
