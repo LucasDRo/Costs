@@ -21,23 +21,78 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "d263",
+      "name": "asda",
+      "budget": "1231",
+      "categories": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "bbfc",
+      "name": "Lucas",
+      "budget": "1500",
+      "categories": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "40cc",
+      "name": "Lucas",
+      "budget": "2000",
+      "categories": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "f3a2",
+      "name": "Lucas",
+      "budget": "2000",
+      "categories": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "b4c5",
+      "name": "Lucas",
+      "budget": "2000",
+      "categories": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Infra"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Desenvolvimento"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Design"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Planejamento"
     }
   ]

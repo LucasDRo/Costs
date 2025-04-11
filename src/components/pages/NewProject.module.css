@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .newproject_container_master {
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #dad7d7;
+    background-color: #222;
     padding: 3em;
     border-radius: 10px;
     box-shadow: 21px 18px 21px -15px rgba(155,144,144,0.75);
@@ -21,10 +21,11 @@
   .newproject_container h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    color: #ffbb33;
   }
 
   .newproject_container p {
-    color: #7b7b7b;
+    color: #FFF;
   }
 
   .img_container img {
@@ -47,14 +48,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #222;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
   }
 
   .newproject_container h1 {
     font-size: 2.5em;
+    color: #ffbb33;
   }
 
   .newproject_container p {
-    color: #7b7b7b;
+    color: #FFF;
   }
 
   .img_container img {

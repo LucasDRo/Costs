@@ -2,8 +2,29 @@ import Message from "../layout/Message";
 import style from "./Projects.module.css";
 import { useLocation } from "react-router-dom";
 import Linkbutton from "../layout/Linkbutton";
+import ProjectCard from "../project/ProjectCard";
+import { useState, useEffect } from "react";
+import { FaBookBookmark } from "react-icons/fa6";
 
 function Projects({}) {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/projects", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const location = useLocation();
   let message = "";
   if (location.state) {
@@ -13,12 +34,29 @@ function Projects({}) {
   return (
     <div className={style.project_master_container}>
       <div className={style.title_container}>
-        <h1>Meus Projetos</h1>
+        <h1>
+          <FaBookBookmark />
+          Meus Projetos
+        </h1>
         <Linkbutton to="/newproject" text="Criar Projeto" />
       </div>
       {message && <Message type="success" msg={message} />}
       <div className={style.project_container}>
-        <p>Projetos...</p>
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <ProjectCard
+              name={project.name}
+              id={project.id}
+              budget={project.budget}
+              category={project.category?.name}
+              key={project.id}
+            />
+          ))
+        ) : (
+          <div>
+            <h1>Não há Projetos cadastrados!</h1>
+          </div>
+        )}
       </div>
     </div>
   );
