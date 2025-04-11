@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import saving from "./../../img/saving.png";
+import saving from "./../../img/pig1.png";
 import Linkbutton from "../layout/Linkbutton";
 
 function Home() {

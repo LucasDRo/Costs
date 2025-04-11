@@ -4,6 +4,7 @@
     padding: 1em;
     width: 100%;
     font-size: small;
+    box-shadow: 0px 8px 20px -6px rgba(155,144,144,1);
 }
 
 .list {
