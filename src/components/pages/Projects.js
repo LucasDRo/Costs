@@ -5,24 +5,29 @@ import Linkbutton from "../layout/Linkbutton";
 import ProjectCard from "../project/ProjectCard";
 import { useState, useEffect } from "react";
 import { FaBookBookmark } from "react-icons/fa6";
+import Loading from "../layout/Loading";
 
 function Projects({}) {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/projects", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
+    setTimeout(() => {
+      fetch("http://localhost:5000/projects", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => {
-        console.log(err);
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          setProjects(data);
+          setLoading(true);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }, 2000);
   }, []);
 
   const location = useLocation();
@@ -42,21 +47,17 @@ function Projects({}) {
       </div>
       {message && <Message type="success" msg={message} />}
       <div className={style.project_container}>
-        {projects.length > 0 ? (
+        {projects.length > 0 &&
           projects.map((project) => (
             <ProjectCard
               name={project.name}
               id={project.id}
               budget={project.budget}
-              category={project.category?.name}
+              category={project.categories.name}
               key={project.id}
             />
-          ))
-        ) : (
-          <div>
-            <h1>Não há Projetos cadastrados!</h1>
-          </div>
-        )}
+          ))}
+          {!loading && <Loading />}
       </div>
     </div>
   );
