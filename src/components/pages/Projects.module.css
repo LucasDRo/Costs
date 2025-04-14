@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
     .project_master_container {
       padding: 2em;
+      height: 100%;
     }
 
     .project_container{
@@ -24,6 +25,11 @@
       color: #222;
       display: flex;
       align-items: center;
+    }
+
+    .no_projects{
+      height: 100vh;
+      width: 100%;
     }
   }
   
@@ -51,6 +57,11 @@
       color: #222;
       display: flex;
       align-items: center;
+    }
+
+    .no_projects{
+      height: 100vh;
+      width: 100%;
     }
   }
   

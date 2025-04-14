@@ -58,6 +58,12 @@ function Projects({}) {
             />
           ))}
           {!loading && <Loading />}
+          {loading && projects.length === 0 && (
+            <div className={style.no_projects}>
+              <h2>Não há projetos cadastrados</h2>
+              <p>Crie seu projeto para começar</p>
+            </div>
+          )}
       </div>
     </div>
   );
