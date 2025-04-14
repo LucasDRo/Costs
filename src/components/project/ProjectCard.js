@@ -1,6 +1,7 @@
 import styles from "./ProjectCard.module.css";
 import { BsFillTrashFill } from "react-icons/bs";
 import { FaPencil } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function ProjectCard({ id, name, budget, category, handleRemove }) {
     const remove = (e) => {
@@ -19,9 +20,9 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
         <span className={`${styles[category.toLowerCase()]}`}></span>{category}
       </p>
       <div className={styles.buttons_container}>
-        <p>
+        <Link to={`/project/${id}`} className={styles.edit}>
           <FaPencil /> Editar
-        </p>
+        </Link>
         <button onClick={remove}>
           <BsFillTrashFill /> Remover
         </button>

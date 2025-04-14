@@ -66,6 +66,22 @@
     margin-top: 0.5em;
   }
 
+  .edit {
+    text-decoration: none;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: small;
+    margin: 4px;
+  }
+
+  .edit:hover {
+    color: #ffbb33;
+  }
+
   .buttons_container p,
   .buttons_container button{
     background-color: #222;
@@ -159,5 +175,21 @@
     cursor: pointer;
     font-size: small;
     margin: 4px;
+  }
+
+  .edit {
+    text-decoration: none;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: small;
+    margin: 4px;
+  }
+
+  .edit:hover {
+    color: #ffbb33;
   }
 }
