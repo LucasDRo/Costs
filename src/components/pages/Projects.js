@@ -10,6 +10,7 @@ import Loading from "../layout/Loading";
 function Projects({}) {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [projectMessage, setProjectMessage] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
@@ -36,6 +37,21 @@ function Projects({}) {
     message = location.state.message;
   }
 
+  function removeProject(id) {
+    fetch(`http://localhost:5000/projects/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json)
+      .then((data) => {
+        setProjects(projects.filter((project) => project.id !== id));
+        setProjectMessage("Projeto removido com sucesso!");
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div className={style.project_master_container}>
       <div className={style.title_container}>
@@ -46,6 +62,7 @@ function Projects({}) {
         <Linkbutton to="/newproject" text="Criar Projeto" />
       </div>
       {message && <Message type="success" msg={message} />}
+      {projectMessage && <Message type="success" msg={projectMessage} />}
       <div className={style.project_container}>
         {projects.length > 0 &&
           projects.map((project) => (
@@ -55,15 +72,16 @@ function Projects({}) {
               budget={project.budget}
               category={project.categories.name}
               key={project.id}
+              handleRemove={removeProject}
             />
           ))}
-          {!loading && <Loading />}
-          {loading && projects.length === 0 && (
-            <div className={style.no_projects}>
-              <h2>Não há projetos cadastrados</h2>
-              <p>Crie seu projeto para começar</p>
-            </div>
-          )}
+        {!loading && <Loading />}
+        {loading && projects.length === 0 && (
+          <div className={style.no_projects}>
+            <h2>Não há projetos cadastrados</h2>
+            <p>Crie seu projeto para começar</p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -21,50 +21,6 @@
       },
       "cost": 0,
       "services": []
-    },
-    {
-      "id": "4fdf",
-      "name": "adsda",
-      "budget": "21313",
-      "categories": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "7e0e",
-      "name": "wqeqwe",
-      "budget": "13333",
-      "categories": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "cb3f",
-      "name": "ooiiieww",
-      "budget": "123333",
-      "categories": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "01d5",
-      "name": "Lucas Diniz",
-      "budget": "12000",
-      "categories": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
     }
   ],
   "categories": [

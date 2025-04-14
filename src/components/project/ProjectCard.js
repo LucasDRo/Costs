@@ -3,6 +3,11 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { FaPencil } from "react-icons/fa6";
 
 function ProjectCard({ id, name, budget, category, handleRemove }) {
+    const remove = (e) => {
+        e.preventDefault();
+        handleRemove(id);
+    }
+
   return (
     <div className={styles.card_container}>
       <h4>{name}</h4>
@@ -17,9 +22,9 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
         <p>
           <FaPencil /> Editar
         </p>
-        <p>
+        <button onClick={remove}>
           <BsFillTrashFill /> Remover
-        </p>
+        </button>
       </div>
     </div>
   );
