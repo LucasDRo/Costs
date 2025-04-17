@@ -5,13 +5,13 @@ function Footer() {
     <footer className={styles.footer}>
       <ul className={styles.social_list}>
         <li>
-          <FaFacebook />
+          <a href="https://www.facebook.com/profile.php?id=100052148408344"><FaFacebook /></a>
         </li>
         <li>
-          <FaInstagram />
+          <a href="https://www.instagram.com/lucasdini_r/"><FaInstagram /></a>
         </li>
         <li>
-          <FaLinkedin />
+          <a href="https://www.linkedin.com/in/lucas-diniz-rodrigues-879743225/"><FaLinkedin /></a>
         </li>
       </ul>
       <p className={styles.copy_right}>

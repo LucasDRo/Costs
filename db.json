@@ -12,12 +12,12 @@
       "services": []
     },
     {
-      "id": "4af6",
-      "name": "Lucas teste 2",
-      "budget": "56666",
+      "id": "2ccd",
+      "name": "Desenvolvimento React",
+      "budget": "2000",
       "categories": {
-        "id": "3",
-        "name": "Design"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": []

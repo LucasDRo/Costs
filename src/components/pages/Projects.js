@@ -28,7 +28,7 @@ function Projects({}) {
         .catch((err) => {
           console.log(err);
         });
-    }, 2000);
+    }, 400);
   }, []);
 
   const location = useLocation();
